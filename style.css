@@ -1,0 +1,222 @@
+:root {
+  --color-background: #0d0d0d;
+  --color-panel: #111111;
+  --color-border: #2a2a2a;
+  --color-accent-green: #4caf50;
+  --color-accent-red: #e53935;
+  --color-accent-cyan: #00bcd4;
+  --color-accent-yellow: #f9a825;
+  --color-text-primary: #e0e0e0;
+  --color-text-dim: #666666;
+  --color-best-result: #1a2e1a;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-display: 'Rajdhani', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  min-height: 100vh;
+}
+
+#page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+#site-header {
+  border-left: 3px solid var(--color-accent-green);
+  padding-left: 16px;
+  margin-bottom: 40px;
+}
+
+#site-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-text-primary);
+}
+
+#site-subtitle {
+  color: var(--color-text-dim);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.panel-heading {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-text-dim);
+  margin-bottom: 16px;
+}
+
+#input-panel {
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+#input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text-dim);
+}
+
+.input-field {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  padding: 8px 10px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-accent-green);
+}
+
+.input-field::-webkit-inner-spin-button,
+.input-field::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#calculate-button {
+  background-color: var(--color-accent-green);
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 12px 32px;
+  transition: opacity 0.2s;
+}
+
+#calculate-button:hover {
+  opacity: 0.85;
+}
+
+#results-panel {
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+}
+
+#results-placeholder {
+  color: var(--color-text-dim);
+  font-size: 0.85rem;
+}
+
+/* best result card */
+#best-result-card {
+  background-color: var(--color-best-result);
+  border: 1px solid var(--color-accent-green);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+#best-result-label {
+  color: var(--color-accent-green);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+#best-result-gems {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#best-result-damage {
+  color: var(--color-text-dim);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* results table */
+#results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+#results-table th {
+  color: var(--color-text-dim);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  padding: 8px 12px;
+  text-align: right;
+  border-bottom: 1px solid var(--color-border);
+}
+
+#results-table th:first-child {
+  text-align: left;
+}
+
+#results-table td {
+  padding: 10px 12px;
+  text-align: right;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-accent-yellow);
+}
+
+#results-table td:first-child {
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+.gem-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  margin-right: 4px;
+}
+
+.gem-tag-crit {
+  background-color: #2e0d0d;
+  color: #a52929;
+  border: 1px solid #a52929;
+}
+
+.gem-tag-attack {
+  background-color: #5c3a1e;
+  color: var(--color-accent-yellow);
+  border: 1px solid var(--color-accent-yellow);
+}
+
+.gem-tag-speed {
+  background-color: #0d2a2e;
+  color: var(--color-accent-cyan);
+  border: 1px solid var(--color-accent-cyan);
+}
