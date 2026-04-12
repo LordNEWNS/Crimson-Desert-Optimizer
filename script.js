@@ -150,7 +150,7 @@ function displayResults() {
     if (bestResult.attackGems > 0) bestResultDescription += bestResult.attackGems + " ATT ";
     if (bestResult.critGems > 0) bestResultDescription += bestResult.critGems + " CRT ";
     if (bestResult.speedGems > 0) bestResultDescription += bestResult.speedGems + " SPD ";
-    bestResultDescription += "Gems";
+    bestResultDescription += "ABYSS";
 
     // build the gem tags for each row in the table
     function buildGemTags(attackGems, critGems, speedGems) {
@@ -186,7 +186,7 @@ function displayResults() {
         <table id="results-table">
             <thead>
                 <tr>
-                    <th>GEMS</th>
+                    <th>ABYSS</th>
                     <th>FINAL ATT</th>
                     <th>FINAL CRT</th>
                     <th>FINAL SPD</th>
